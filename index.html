@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+
+        <script>
+                function Phone(brand, price, color, simlock) {
+                    this.brand = brand;
+                    this.price = price;
+                    this.color = color;
+                    this.simlock = simlock;
+                }
+
+                Phone.prototype.printInfo = function() {
+                    console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + " [with simlock: "+ this.simlock + "].");
+                }  
+
+                var iPhone6S = new Phone("Apple", 2250, "silver", "yes");
+                var Samsung_Galaxy_S6 = new Phone("Samsung", 2000, "red", "yes");
+                var OnePlus_One = new Phone("OnePlus", 1200, "gold", "yes");
+
+                iPhone6S.printInfo();
+        </script>
+        
+        <script  src="js/script.js"></script>
+	</body>
+</html>
