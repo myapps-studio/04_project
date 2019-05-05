@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-
+<!-- Zadanie: Pierwsza klasa-->
         <script>
                 function Phone(brand, price, color, simlock) {
                     this.brand = brand;
@@ -23,7 +23,28 @@
 
                 iPhone6S.printInfo();
         </script>
+
+<!-- Zadanie: Użycie "self" -->
+        <script>
+                function Button(text) {
+	            this.text = text || 'Hello';
+                }
+
+                Button.prototype = {
+                	    create: function() {
+                        var self = this;
+                        this.element = document.createElement('button');
+                        this.element.innerText = this.text;
+                        this.element.addEventListener('click', function() {
+                            alert(self.text);
+                        });
+                        document.body.appendChild(this.element);
+	                }
+                }
+
+                var btn1 = new Button('Hello!');
+                btn1.create();
+        </script>
         
-        <script  src="js/script.js"></script>
 	</body>
 </html>
